@@ -133,7 +133,7 @@ jobs:
           slack-channel: ${{ fromJSON(env.TEAM_TO_CHANNEL)[ needs.get-team-name.outputs.team] }}
           slack-text: >
                       Hello from reflection bot!\n
-                      PR https://github.com/${{github.repository}}/pull/${{needs.get-pr-num.outputs.pr_number}} was merged.\n
+                      PR https://github.com/${{github.repository}}/pull/${{needs.get-pr-num.outputs.pr_number}} was closed but not merged!\n
                       *Each team member that was involved in this PR (either coding or code review)*, please now write a brief reflection *in this thread* on what you as an individual, or your team, learned from this PR, if anything.\n
                       Note that your team will be graded on two aspects: (1) the percentage of prompts like this one to which your team responds, (2) the quality of your responses.\n\n
                       Example reflection on PR (See this example PR for details https://github.com/ucsb-cs156-s24/STARTER-team03/pull/16):\n
