@@ -18,7 +18,6 @@ on:
       - closed
 
 
-#TODO: update the team to channel mapping
 env:
   GH_TOKEN: ${{ github.token }}
   TEAM_TO_CHANNEL: "{ \"s24-4pm-1\": \"C06R8PWJ563\", \"s24-4pm-2\": \"C06RPB52YHG\", \"s24-4pm-3\": \"C06S2146S49\",
