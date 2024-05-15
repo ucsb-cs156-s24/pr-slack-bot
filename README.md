@@ -1,5 +1,7 @@
 # pr-slack-bot
 
+TEST CLOSE WITHOUT MERGE
+
 A repo with the workflow for posting to slack when a pr is merged
 
 To use: 
