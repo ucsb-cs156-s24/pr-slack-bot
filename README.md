@@ -7,14 +7,21 @@ To use:
   - This involves creating a slack app
 * Define an organization level secret: SLACK_BOT_USER_OAUTH_ACCESS_TOKEN with that value
 * Define an organization level variable called TEAM_TO_CHANNEL which is a JSON object mapping the last nine characters of the repo (typically team name) to team channel
-* Install the slack app in every team channel
+* Install the slack app in every team channel (see below)
+
+# Installing the app
+
+<img width="456" alt="image" src="https://github.com/ucsb-cs156-s24/pr-slack-bot/assets/1119017/bcd232ce-107f-4a4b-8100-7c944239cf20">
+
+<img width="548" alt="image" src="https://github.com/ucsb-cs156-s24/pr-slack-bot/assets/1119017/8cb447bb-91f7-4610-bddd-b482407887cd">
+
 
 Installing looks like this when successful:
 
 <img width="468" alt="image" src="https://github.com/ucsb-cs156-s24/pr-slack-bot/assets/1119017/d7c92956-a53a-4bf4-bcf9-e3c981c43bba">
 
 
-Example value for `TEAM_TO_CHANNEL`
+# Example value for `TEAM_TO_CHANNEL`
 
 ```json
 {
