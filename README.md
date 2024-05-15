@@ -1,5 +1,7 @@
 # pr-slack-bot
 
+TEST CLOSE WITHOUT MERGE 2
+
 A repo with a workflow for posting to a team's slack channel when a pr is merged.
 
 The team is taken from the last nine characters of the repo name.
