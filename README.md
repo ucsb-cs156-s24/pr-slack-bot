@@ -1,4 +1,4 @@
-# pr-slack-bot
+# pr-slack-bot   
 
 A repo with a workflow for posting to a team's slack channel when a pr is merged.
 
