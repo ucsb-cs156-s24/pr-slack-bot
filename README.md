@@ -1,6 +1,6 @@
 # pr-slack-bot
 
-A repo with the workflow for posting to slack when a pr is merged
+A repo with the workflow for posting to slack when a pr is merged.
 
 To use: 
 * Generate a Slack OAuth Token (see: <https://docs.celigo.com/hc/en-us/articles/7140655476507-How-to-create-an-app-and-retrieve-OAuth-token-in-Slack>
