@@ -20,12 +20,7 @@ on:
 
 env:
   GH_TOKEN: ${{ github.token }}
-  TEAM_TO_CHANNEL: "{ \"s24-4pm-1\": \"C06R8PWJ563\", \"s24-4pm-2\": \"C06RPB52YHG\", \"s24-4pm-3\": \"C06S2146S49\",
-                      \"s24-4pm-4\": \"C06S2156TL1\", \"s24-4pm-5\": \"C06SC4XSQL8\", \"s24-4pm-6\": \"C06R8Q1ST8F\", 
-                      \"s24-4pm-7\": \"C06RPBBPPLJ\", \"s24-4pm-8\": \"C06SC52SKKJ\", \"s24-5pm-1\": \"C06RLDRFMRB\", 
-                      \"s24-5pm-2\": \"C06SC553MLY\", \"s24-5pm-3\": \"C06S21ENK5X\", \"s24-5pm-4\": \"C06RP82BN9H\",
-                      \"s24-5pm-5\": \"C06RP83BA83\", \"s24-5pm-6\": \"C06RGNALUES\", \"s24-5pm-7\": \"C06RPBN3D8A\",
-                      \"s24-5pm-8\": \"C06RLE09SLV\"  }"
+  TEAM_TO_CHANNEL: ${{ vars.TEAM_TO_CHANNEL }}
   TEAM: ${{github.repository}}
   
 permissions:
