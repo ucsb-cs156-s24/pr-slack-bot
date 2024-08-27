@@ -1,0 +1,43 @@
+name: "Team Contributions Report"
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 1
+
+    - name: Set up GitHub CLI
+      uses: cli/gh-actions@v2
+      with:
+        gh-version: 'latest'
+
+    - name: Authenticate with GitHub CLI
+      run: gh auth login --with-token < ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Count Commits on main by Author
+      id: count_commits
+      run: |
+        echo "Commits on main by author:"
+        git log --use-mailmap --pretty=format:"%an" main | sort | uniq -c | sort -nr
+
+    - name: Count Merged PRs to main by Author
+      id: count_merged_prs
+      run: |
+        echo "Merged PRs to main by author:"
+        gh pr list --state merged --base main --json mergedBy --jq '.[] | .mergedBy.login' | sort | uniq -c | sort -nr
+
+    - name: Output Results
+      run: |
+        echo "Commits on main by author:"
+        echo "${{ steps.count_commits.outputs.stdout }}"
+        echo "Merged PRs to main by author:"
+        echo "${{ steps.count_merged_prs.outputs.stdout }}"
