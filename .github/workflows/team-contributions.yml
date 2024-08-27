@@ -28,7 +28,7 @@ jobs:
         cat commits_by_author.txt
 
     - name: Set up GitHub CLI
-      uses: cli/gh-actions@v2
+      uses: actions/setup-gh@v1
       with:
         gh-version: 'latest'
 
